@@ -1,0 +1,5 @@
+kekurangan:
+1. masih mencari cara untuk membersihkan semua to do list dari database
+2. tampilan kurang, rencananya pake materialize sebagai framework css, entah knp gk bsa, jadi cmn mw pake css biasa
+3. kekurangan paling fatal mungkin aku masih ngikutin tutorial dari internet (tp alurnya Insya Allah paham
+   sama masih coba pahamin konsepnya spaya gampang klw bikin yang lain)

@@ -4,8 +4,10 @@ from flask import request
 from flask import redirect
 from flask import url_for
 from flask_sqlalchemy import SQLAlchemy 
+from flask_material import Material
 
 app = Flask(__name__)
+Material(app)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///D:\\Project\\Programming\\Python\\pyweb\\Todolist\\todo.db'
 

@@ -1,46 +1,43 @@
+{% extends "material/base.html" %}
+{% block content %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8"/>
     <title>Todo App</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="css/materialize.min.css">
-    <style type="text/css">
-        /* .container{
-            width: 80%;
-            margin: 0 auto;
-        } */
-    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Todo List</h1>
+        <h2>Todo List</h2>
         <div>
-            <h3>A new to do item: </h3>
+            <h4>A new to do item: </h4>
             <form action="{{ url_for('add') }}" method="POST">
                 <input type="text" name="todoitem">
                 <input type="submit" value="Add Item">
             </form>
         </div>
         <div>
-            <h2>Incomplete Items</h2>
-            <ul style="list-style-type:none">
+            <h4>Incomplete Items</h4>
+            <h5>(click "<i class="material-icons">check_circle_outline</i>" besides your item to make it completed)</h5>
+            <ul style="list-style-type:none" class="collection">
                 {% for todo in incomplete %}
-                <li>
+                <li class="collection-item">
                     <p><a href="{{ url_for('complete', id=todo.id) }}"><i class="material-icons">check_circle_outline</i></a> {{ todo.text }}</p>
                 </li>
                 {% endfor %}    
             </ul>
-            <h2>Completed Items</h2>
-            <ul style="list-style-type:none">
+            <h4>Completed Items</h4>
+            <ul style="list-style-type:none" class="collection">
                 {% for todo in complete %}
-                <li>
+                <li class="collection-item">
                     <i class="material-icons">done</i>{{ todo.text }}
                 </li>
                 {% endfor %}
             </ul>
         </div>
     </div>
-    <script src="js/materialize.min.js"></script>
 </body>
 </html>
+
+{% endblock %}

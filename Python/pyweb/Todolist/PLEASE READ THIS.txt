@@ -3,3 +3,6 @@ kekurangan:
 2. tampilan kurang, rencananya pake materialize sebagai framework css, entah knp gk bsa, jadi cmn mw pake css biasa
 3. kekurangan paling fatal mungkin aku masih ngikutin tutorial dari internet (tp alurnya Insya Allah paham
    sama masih coba pahamin konsepnya spaya gampang klw bikin yang lain)
+
+edit:
+2. heeyy, finally i can use materialize css framework using Flask_material, with pip install flask-material
